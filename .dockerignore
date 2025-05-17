@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+*.db-journal
+*.sqlite3
+.env

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MoodMeals</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 min-h-screen flex items-center justify-center p-6">
+
+  <main class="bg-white bg-opacity-10 backdrop-blur-md rounded-3xl shadow-lg max-w-md w-full p-10 text-center">
+    <h1 class="text-4xl font-extrabold text-yellow-400 mb-6 tracking-wide">MoodMeals</h1>
+    <p class="mb-8 text-gray-200 text-lg font-light">Find the perfect recipe to match your mood.</p>
+
+    <form method="post" class="flex flex-col space-y-6">
+      <input
+        type="text"
+        name="mood"
+        placeholder="Enter your mood (e.g., happy, sad, adventurous)"
+        class="px-5 py-3 rounded-lg text-gray-900 text-lg font-medium focus:outline-none focus:ring-4 focus:ring-yellow-400"
+        required
+      />
+      <button
+        type="submit"
+        class="bg-yellow-400 hover:bg-yellow-300 transition-colors duration-300 font-bold text-gray-900 rounded-lg py-3 text-lg"
+      >
+        Find My Recipe
+      </button>
+    </form>
+
+    {% if recipe %}
+      <section class="mt-10 bg-yellow-400 bg-opacity-20 rounded-lg p-6">
+        <h2 class="text-2xl font-semibold text-yellow-500 mb-2">Your Recipe:</h2>
+        <p class="text-white text-xl font-medium">{{ recipe }}</p>
+      </section>
+    {% endif %}
+  </main>
+
+</body>
+</html>
